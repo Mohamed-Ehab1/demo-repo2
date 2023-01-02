@@ -26,6 +26,7 @@ jobs:
       steps:
       - name: create comment with api
         run: |
+           sudo apt intsall gh
            gh api -X POST \ 
             https://api.github.com/repo/${ORGANISATION}/${REPOSITORY}/iussues/${ISSUE_NUMBER/comments \
             -f body = '
